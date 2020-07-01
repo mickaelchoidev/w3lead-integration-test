@@ -1,0 +1,23 @@
+h1  {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 23.4375em) {
+  .Home-container {
+    padding: 42px 32px 42px 32px;
+  }
+
+  .What-item-are-you-lo {
+    width: 214px;
+    height: 62px;
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #3d3c3c;
+  }
+}
