@@ -4,14 +4,14 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
 import Home from "./screens/Home";
-// import Details from "./screens/Details";
+import Details from "./screens/Details";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/home" component={Home} />
-        {/* <Route path="/details" component={Details} /> */}
+        <Route exact path="/" component={Home} />
+        <Route path="/details" component={Details} />
       </Switch>
     </Router>
   );

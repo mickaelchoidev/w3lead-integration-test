@@ -4,15 +4,30 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <div>
-      <ul>
-        <li>Chairs</li>
-        <li>Sofas</li>
-        <li>Tables</li>
-        <li>Lamps</li>
-        <li>Kit</li>
+    <nav className="Nav-container">
+      <ul className="Nav-content">
+        <li className="Nav-link Selected">
+          <p className="Link">Chairs</p>
+          <div className="Dot" />
+        </li>
+        <li className="Nav-link">
+          <p className="Link">Sofas</p>
+          <div className="Dot Transparent" />
+        </li>
+        <li className="Nav-link">
+          <p className="Link">Tables</p>
+          <div className="Dot Transparent" />
+        </li>
+        <li className="Nav-link">
+          <p className="Link">Lamps</p>
+          <div className="Dot Transparent" />
+        </li>
+        <li className="Nav-link">
+          <p className="Link">Kit</p>
+          <div className="Dot Transparent" />
+        </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 

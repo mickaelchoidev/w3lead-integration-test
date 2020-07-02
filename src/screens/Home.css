@@ -4,13 +4,9 @@ h1  {
 }
 
 @media screen and (max-width: 23.4375em) {
-  .Home-container {
-    padding: 42px 32px 42px 32px;
-  }
-
   .What-item-are-you-lo {
+    margin: 42px 0 39px 30px;
     width: 214px;
-    height: 62px;
     font-family: Rubik;
     font-size: 24px;
     font-weight: 500;
@@ -19,5 +15,12 @@ h1  {
     line-height: 1.29;
     letter-spacing: normal;
     color: #3d3c3c;
+  }
+
+  .Cards-container {
+    margin: 0 0 0 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }

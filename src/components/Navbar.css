@@ -1,0 +1,47 @@
+.Nav-container {
+  margin: 0 0 31px 30px;
+  padding: 0;
+}
+.Nav-content {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.Nav-link {
+  margin: 0 38px 0 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #bbbbbb;
+  cursor: pointer;
+}
+.Link {
+  margin: 0;
+  padding: 0;
+  height: 18px;
+  font-family: Rubik;
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.Selected {
+  color: #3d3c3c;
+}
+.Dot {
+  margin-top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #3d3c3c;
+}
+.Transparent {
+  opacity: 0;
+}
