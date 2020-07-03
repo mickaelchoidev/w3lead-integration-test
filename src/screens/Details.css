@@ -1,3 +1,206 @@
-@media screen and (max-width: 23.4375em) {
-  /* CSS rules here */
+.Details {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.GoBack {
+  width: 45px;
+  height: 45px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 42px;
+  left: 30px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.Details-image {
+  width: 246px;
+  height: 234px;
+  object-fit: contain;
+  margin: 157px 0 60px 0;
+}
+
+.Details-container {
+  padding: 33px 0 0 0;
+  width: 100%;
+  height: 361px;
+  border-radius: 36px;
+  background-color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+.Details-infos {
+  width: auto;
+  margin: 0 27px 7px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.Details-title {
+  padding: 0;
+  margin: 0;
+  font-family: Rubik;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3d3d;
+}
+.Details-price {
+  padding: 0;
+  margin: 0;
+  opacity: 0.46;
+  font-family: Rubik;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #01205c;
+}
+
+.Details-type {
+  padding: 0;
+  margin: 0 0 23px 30px;
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #9e9e9e;
+}
+
+.Details-description {
+  padding: 0 0 0 30px;
+  margin: 0 0 43px 0;
+  width: 82%;
+  height: 73px;
+  font-family: Rubik;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: #646363;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.Details-choice {
+  width: auto;
+  margin: 0;
+  padding: 0 30px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Choice-color {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Color {
+  margin: 0 17px 0 0;
+  padding: 0;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+}
+.Color:focus {
+  width: 20px;
+  height: 20px;
+  border: solid 4px #acb8d6;
+  outline: none;
+}
+
+.Quantity-choice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Number {
+  padding: 0;
+  margin: 0 0 0 17px;
+  font-family: Rubik;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3d3d;
+}
+.Operator {
+  margin: 0 0 0 16px;
+  width: 28px;
+  height: 28px;
+  opacity: 0.14;
+  border-radius: 8px;
+  background-color: #748ad5;
+  cursor: pointer;
+}
+
+.Details-Add {
+  padding: 0;
+  margin: 46px 0 0 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 64px;
+  border-radius: 16px;
+  background-color: rgba(23, 42, 232, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.ShoppingBasket-icone {
+  width: 21px;
+  height: 18px;
+  background-color: #748ad5;
+  text-align: center;
+  margin-right: 13px;
+}
+.AddToCart {
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: 0.44px;
+  color: #748ad5;
+}
+
+@media (min-width: 750px) {
+  .GoBack {
+    left: 150px;
+  }
+  .Details-infos {
+    margin: 0 250px 7px 250px;
+  }
+  .Details-type {
+    margin: 0 0 23px 250px;
+  }
+  .Details-description {
+    padding: 0 0 0 250px;
+    width: 50%;
+  }
+  .Details-choice {
+    padding: 0 250px 0 250px;
+  }
 }

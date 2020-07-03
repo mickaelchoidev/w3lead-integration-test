@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;
   flex-wrap: nowrap;
   overflow-x: auto;
   scrollbar-width: none;
@@ -14,16 +15,21 @@
   margin: 0 38px 0 0;
   padding: 0;
   list-style-type: none;
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #bbbbbb;
   cursor: pointer;
+}
+.Nav-link:focus {
+  color: #3d3c3c;
+  outline: none;
 }
 .Link {
   margin: 0;
   padding: 0;
   height: 18px;
+  color: #bbbbbb;
   font-family: Rubik;
   font-size: 15px;
   font-weight: 500;
@@ -32,16 +38,32 @@
   line-height: normal;
   letter-spacing: normal;
 }
-.Selected {
+.Link:focus {
   color: #3d3c3c;
+  outline: none;
 }
 .Dot {
   margin-top: 7px;
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: #3d3c3c;
 }
 .Transparent {
   opacity: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+@media (min-width: 750px) {
+  .Nav-container {
+    margin: 0 0 31px 0;
+    padding: 0;
+  }
+
+  .Nav-content {
+    display: flex;
+    justify-content: center;
+  }
 }

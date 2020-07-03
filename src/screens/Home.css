@@ -3,23 +3,69 @@ h1  {
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 23.4375em) {
+.Home {
+  width: 75vw;
+  margin: 0 auto 0 auto;
+}
+
+.Card {
+  text-decoration: none;
+}
+
+.What-item-are-you-lo {
+  margin: 42px 0 39px 30px;
+  width: 100%;
+  font-family: Rubik;
+  font-size: 35px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #3d3c3c;
+}
+
+.Cards-container {
+  margin: 0 0 0 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 376px) and (max-width: 750px) {
+  .Home {
+    width: 100%;
+    margin: 0;
+  }
   .What-item-are-you-lo {
-    margin: 42px 0 39px 30px;
+    font-size: 30px;
+    width: 80%;
+  }
+  .Cards-container {
+    margin: 0 0 0 30px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 375px) {
+  .Home {
+    width: 100%;
+    margin: 0;
+  }
+
+  .What-item-are-you-lo {
     width: 214px;
-    font-family: Rubik;
     font-size: 24px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.29;
-    letter-spacing: normal;
-    color: #3d3c3c;
   }
 
   .Cards-container {
     margin: 0 0 0 30px;
     display: flex;
+    justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
   }

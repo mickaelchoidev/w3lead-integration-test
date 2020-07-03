@@ -3,7 +3,7 @@ import React from "react";
 import "./Card.css";
 
 const Card = ({ data }) => {
-  console.log(data.image);
+  // console.log(data.image);
   return (
     <div
       className="Card-container"
