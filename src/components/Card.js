@@ -2,22 +2,21 @@ import React from "react";
 
 import "./Card.css";
 
-const Card = ({ data }) => {
-  // console.log(data.image);
+const Card = ({ product }) => {
   return (
     <div
       className="Card-container"
-      style={{ backgroundColor: data.backgroundColor }}
+      style={{ backgroundColor: product.backgroundColor }}
     >
       <img
-        src={require(`../images/${data.image}.png`)}
+        src={require(`../images/${product.image}.png`)}
         className="Card-image"
-        alt={data.name}
+        alt={product.name}
       />
       <div className="Card-infos">
-        <h3 className="Card-title">{data.name}</h3>
-        <p className="Card-price" style={{ color: data.priceColor }}>
-          {data.price}
+        <h3 className="Card-title">{product.name}</h3>
+        <p className="Card-price" style={{ color: product.priceColor }}>
+          {product.price}
         </p>
       </div>
     </div>

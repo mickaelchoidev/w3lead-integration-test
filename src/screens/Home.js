@@ -1,76 +1,70 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import data from "../data/Data.json";
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 
 import "./Home.css";
 
 const Home = () => {
-  const data = [
-    {
-      name: "Roswell",
-      image: "roswell",
-      price: "$50",
-      backgroundColor: "#dee6e1",
-      priceColor: "#2c993b",
-    },
-    {
-      name: "Minimal",
-      image: "minimal",
-      price: "$42",
-      backgroundColor: "#e5e5e5",
-      priceColor: "#3c3d3d",
-    },
-    {
-      name: "Lounge",
-      image: "lounge",
-      price: "$35",
-      backgroundColor: "#d9dcf7",
-      priceColor: "#01205c",
-      bigImage: "lounge-big",
-      detailsTitle: "Lounge Chair",
-      type: "Chairs",
-      description:
-        "Sed ut ipsi auctori huius disciplinae placet: constituam, quid aut officiis debitis aut. In quo enim ipsam voluptatem, quia dolor sit, a sapiente delectus, ut earum.",
-      colors: ["#171c23", "#fc9090", "#8ed7a6"],
-    },
-    {
-      name: "Velvet",
-      image: "velvet",
-      price: "$53",
-      backgroundColor: "#ebe6e4",
-      priceColor: "#c35c5c",
-    },
-  ];
+  const newData = [...data];
+  const ListChairs = newData[0].listProducts;
 
   return (
     <div className="Home">
       <h1 className="What-item-are-you-lo">What item are you looking for ?</h1>
-      <Navbar className="Navbar" />
+
+      <Navbar className="Navbar" productsList={newData} />
+
       <section className="Cards-container">
-        {data.map((item, index) => {
-          // console.log(item);
+        {ListChairs.map((item, index) => {
           if (index === 2) {
             return (
               <Link
                 className="Card"
                 to={{
                   pathname: "/details",
-                  aboutProps: data[index],
+                  aboutProps: ListChairs[index],
                 }}
                 key={index}
               >
-                <Card data={item} key={index} />
+                <Card product={item} key={index} />
               </Link>
             );
           } else {
-            return <Card data={item} key={index} />;
+            return <Card product={item} key={index} />;
           }
         })}
+
+        {/* {CardsDisplay(ListChairs)} */}
       </section>
     </div>
   );
 };
 
 export default Home;
+
+// Fonction pour afficher les différents composants Card
+//
+// const CardsDisplay = (array) => {
+//   array.map((item, index) => {
+//     console.log(item);
+//     if (index === 2) {
+//       return (
+//         <Link
+//           className="Card"
+//           to={{
+//             pathname: "/details",
+//             aboutProps: ListChairs[index],
+//           }}
+//           key={index}
+//         >
+//           <Card product={item} key={index} />
+//         </Link>
+//       );
+//     } else {
+//       return <Card product={item} key={index} />;
+//     }
+//   });
+// };

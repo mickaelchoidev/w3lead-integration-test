@@ -7,6 +7,9 @@ const Details = (props) => {
   let history = useHistory();
   const data = props.location.aboutProps;
   const [count, setCount] = useState(1);
+  const [black, setBlack] = useState(true);
+  const [red, setRed] = useState(false);
+  const [blue, setBlue] = useState(false);
 
   const GoBack = () => history.push("/");
 
@@ -18,12 +21,13 @@ const Details = (props) => {
 
   return (
     <div className="Details" style={{ backgroundColor: data.backgroundColor }}>
-      <input type="button" value="<--" className="GoBack" onClick={GoBack} />
+      <input type="button" value="<-" className="GoBack" onClick={GoBack} />
       <img
         src={require(`../images/${data.bigImage}.png`)}
         alt={data.name}
         className="Details-image"
       />
+
       <div className="Details-container">
         <div className="Details-infos">
           <h3 className="Details-title">{data.detailsTitle}</h3>
@@ -33,14 +37,33 @@ const Details = (props) => {
         <p className="Details-description">{data.description}</p>
         <div className="Details-choice">
           <div className="Choice-color">
-            {data.colors.map((color) => (
-              <div
-                tabIndex="0"
-                className="Color"
-                style={{ backgroundColor: color }}
-                key={color}
-              />
-            ))}
+            <div
+              className={black ? "Color Chosen" : "Color"}
+              style={{ backgroundColor: data.colors[0] }}
+              onClick={() => {
+                setBlack(!black);
+                setRed(false);
+                setBlue(false);
+              }}
+            />
+            <div
+              className={red ? "Color Chosen" : "Color"}
+              style={{ backgroundColor: data.colors[1] }}
+              onClick={() => {
+                setRed(!red);
+                setBlack(false);
+                setBlue(false);
+              }}
+            />
+            <div
+              className={blue ? "Color Chosen" : "Color"}
+              style={{ backgroundColor: data.colors[2] }}
+              onClick={() => {
+                setBlue(!blue);
+                setBlack(false);
+                setRed(false);
+              }}
+            />
           </div>
           <div className="Quantity-choice">
             <input
@@ -58,6 +81,7 @@ const Details = (props) => {
             />
           </div>
         </div>
+
         <div className="Details-Add" onClick={LogMessage}>
           <div className="ShoppingBasket-icone">o</div>
           <p className="AddToCart">Add to Cart</p>

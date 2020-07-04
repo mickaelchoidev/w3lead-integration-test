@@ -1,0 +1,51 @@
+[
+  {
+    "products": "Chairs",
+    "listProducts": [
+      {
+        "name": "Roswell",
+        "price": "$50",
+        "type": "Chairs",
+        "image": "roswell",
+        "backgroundColor": "#dee6e1",
+        "priceColor": "#2c993b"
+      },
+      {
+        "name": "Minimal",
+        "price": "$42",
+        "type": "Chairs",
+        "image": "minimal",
+        "backgroundColor": "#e5e5e5",
+        "priceColor": "#3c3d3d"
+      },
+      {
+        "name": "Lounge",
+        "price": "$35",
+        "type": "Chairs",
+        "image": "lounge",
+        "backgroundColor": "#d9dcf7",
+        "priceColor": "#01205c",
+        "bigImage": "lounge-big",
+        "detailsTitle": "Lounge Chair",
+        "description": "Sed ut ipsi auctori huius disciplinae placet: constituam, quid aut officiis debitis aut. In quo enim ipsam voluptatem, quia dolor sit, a sapiente delectus, ut earum.",
+        "colors": ["#171c23", "#fc9090", "#8ed7a6"]
+      },
+      {
+        "name": "Velvet",
+        "price": "$53",
+        "type": "Chairs",
+        "image": "velvet",
+        "backgroundColor": "#ebe6e4",
+        "priceColor": "#c35c5c"
+      }
+    ]
+  },
+
+  { "products": "Sofas" },
+
+  { "products": "Tables" },
+
+  { "products": "Lamps" },
+
+  { "products": "Kit" }
+]

@@ -14,7 +14,6 @@
 .Nav-link {
   margin: 0 38px 0 0;
   padding: 0;
-  list-style-type: none;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -24,11 +23,11 @@
 .Nav-link:focus {
   color: #3d3c3c;
   outline: none;
+  background-color: #3d3c3c;
 }
 .Link {
   margin: 0;
   padding: 0;
-  height: 18px;
   color: #bbbbbb;
   font-family: Rubik;
   font-size: 15px;
@@ -38,32 +37,32 @@
   line-height: normal;
   letter-spacing: normal;
 }
-.Link:focus {
-  color: #3d3c3c;
-  outline: none;
-}
 .Dot {
   margin-top: 7px;
   width: 5px;
   height: 5px;
   border-radius: 50%;
-}
-.Transparent {
+  background-color: #3d3c3c;
   opacity: 0;
 }
-
-li {
-  list-style-type: none;
+.Selected {
+  color: #3d3c3c;
+  opacity: 1;
 }
 
 @media (min-width: 750px) {
   .Nav-container {
-    margin: 0 0 31px 0;
+    margin: 0 0 50px 0;
     padding: 0;
   }
-
   .Nav-content {
     display: flex;
     justify-content: center;
+  }
+  .Nav-link {
+    margin: 0 30px 0 30px;
+  }
+  .Link {
+    font-size: 20px;
   }
 }
