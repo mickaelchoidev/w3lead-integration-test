@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
 
+// icons
+import { MdArrowBack } from "react-icons/md";
+import { MdRemove } from "react-icons/md";
+import { MdAdd } from "react-icons/md";
+import { MdShoppingBasket } from "react-icons/md";
+
 import "./Details.css";
 
 const pageVariants = {
@@ -40,7 +46,9 @@ const Details = (props) => {
       variants={pageVariants}
       transition={pageTransition}
     >
-      <input type="button" value="<-" className="GoBack" onClick={GoBack} />
+      <button className="GoBack" onClick={GoBack}>
+        <MdArrowBack color={data.priceColor} size="25px" opacity="0.46" />
+      </button>
       <img
         src={require(`../images/${data.bigImage}.png`)}
         alt={data.name}
@@ -50,7 +58,9 @@ const Details = (props) => {
       <div className="Details-container">
         <div className="Details-infos">
           <h3 className="Details-title">{data.detailsTitle}</h3>
-          <p className="Details-price">{data.price}</p>
+          <p className="Details-price" style={{ color: data.priceColor }}>
+            {data.price}
+          </p>
         </div>
         <p className="Details-type">{data.type}</p>
         <p className="Details-description">{data.description}</p>
@@ -97,25 +107,34 @@ const Details = (props) => {
             />
           </div>
           <div className="Quantity-choice">
-            <input
-              type="button"
+            <button
               className="Operator"
-              value="-"
               onClick={() => (count > 1 ? setCount(count - 1) : null)}
-            />
+            >
+              <MdRemove color={data.priceColor} size="20px" opacity="0.46" />
+            </button>
             <p className="Number">{count}</p>
-            <input
-              type="button"
+            <button
               className="Operator"
-              value="+"
               onClick={() => (count < 10 ? setCount(count + 1) : null)}
-            />
+            >
+              <MdAdd color={data.priceColor} size="20px" opacity="0.46" />
+            </button>
           </div>
         </div>
 
-        <div className="Details-Add" onClick={LogMessage}>
-          <div className="ShoppingBasket-icone">o</div>
-          <p className="AddToCart">Add to Cart</p>
+        <div className="Details-Add">
+          <button onClick={LogMessage} className="Details-AddButton">
+            <MdShoppingBasket
+              color={data.priceColor}
+              size="20px"
+              opacity="0.46"
+              className="ShoppingBasket-icon"
+            />
+            <p className="AddToCart" style={{ color: data.priceColor }}>
+              Add to Cart
+            </p>
+          </button>
         </div>
       </div>
     </motion.div>

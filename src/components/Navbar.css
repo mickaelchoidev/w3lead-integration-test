@@ -16,7 +16,7 @@
   flex-wrap: nowrap;
 }
 .Nav-link {
-  margin: 0 37.5px 0 0;
+  margin: 0 38px 0 0;
   padding: 0;
   text-decoration: none;
   display: flex;
@@ -55,6 +55,7 @@
     padding: 0;
   }
   .Nav-content {
+    margin: 0;
     display: flex;
     justify-content: center;
     position: relative;

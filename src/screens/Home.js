@@ -54,35 +54,9 @@ const Home = () => {
             return <Card product={item} key={index} />;
           }
         })}
-
-        {/* {CardsDisplay(ListChairs)} */}
       </section>
     </motion.div>
   );
 };
 
 export default Home;
-
-// Fonction pour afficher les différents composants Card
-//
-// const CardsDisplay = (array) => {
-//   array.map((item, index) => {
-//     console.log(item);
-//     if (index === 2) {
-//       return (
-//         <Link
-//           className="Card"
-//           to={{
-//             pathname: "/details",
-//             aboutProps: ListChairs[index],
-//           }}
-//           key={index}
-//         >
-//           <Card product={item} key={index} />
-//         </Link>
-//       );
-//     } else {
-//       return <Card product={item} key={index} />;
-//     }
-//   });
-// };
