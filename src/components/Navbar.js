@@ -17,11 +17,15 @@ const Navbar = () => {
         <li
           className="Nav-link"
           onClick={() => {
-            setChairs(!chairs);
-            setSofas(false);
-            setTables(false);
-            setLamps(false);
-            setKit(false);
+            if (!chairs) {
+              setChairs(!chairs);
+              setSofas(false);
+              setTables(false);
+              setLamps(false);
+              setKit(false);
+            } else {
+              setChairs(true);
+            }
           }}
         >
           <p className={chairs ? "Link Selected" : "Link"}>Chairs</p>
@@ -30,11 +34,15 @@ const Navbar = () => {
         <li
           className="Nav-link"
           onClick={() => {
-            setSofas(!sofas);
-            setChairs(false);
-            setTables(false);
-            setLamps(false);
-            setKit(false);
+            if (!sofas) {
+              setSofas(!sofas);
+              setChairs(false);
+              setTables(false);
+              setLamps(false);
+              setKit(false);
+            } else {
+              setSofas(true);
+            }
           }}
         >
           <p className={sofas ? "Link Selected" : "Link"}>Sofas</p>
@@ -43,11 +51,15 @@ const Navbar = () => {
         <li
           className="Nav-link"
           onClick={() => {
-            setTables(!tables);
-            setChairs(false);
-            setSofas(false);
-            setLamps(false);
-            setKit(false);
+            if (!tables) {
+              setTables(!tables);
+              setChairs(false);
+              setSofas(false);
+              setLamps(false);
+              setKit(false);
+            } else {
+              setTables(true);
+            }
           }}
         >
           <p className={tables ? "Link Selected" : "Link"}>Tables</p>
@@ -56,11 +68,15 @@ const Navbar = () => {
         <li
           className="Nav-link"
           onClick={() => {
-            setLamps(!lamps);
-            setChairs(false);
-            setSofas(false);
-            setTables(false);
-            setKit(false);
+            if (!lamps) {
+              setLamps(!lamps);
+              setChairs(false);
+              setSofas(false);
+              setTables(false);
+              setKit(false);
+            } else {
+              setLamps(true);
+            }
           }}
         >
           <p className={lamps ? "Link Selected" : "Link"}>Lamps</p>
@@ -69,11 +85,15 @@ const Navbar = () => {
         <li
           className="Nav-link"
           onClick={() => {
-            setKit(!kit);
-            setChairs(false);
-            setSofas(false);
-            setTables(false);
-            setLamps(false);
+            if (!kit) {
+              setKit(!kit);
+              setChairs(false);
+              setSofas(false);
+              setTables(false);
+              setLamps(false);
+            } else {
+              setKit(true);
+            }
           }}
         >
           <p className={kit ? "Link Selected" : "Link"}>Kit</p>

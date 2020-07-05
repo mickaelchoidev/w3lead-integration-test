@@ -41,27 +41,39 @@ const Details = (props) => {
               className={black ? "Color Chosen" : "Color"}
               style={{ backgroundColor: data.colors[0] }}
               onClick={() => {
-                setBlack(!black);
-                setRed(false);
-                setBlue(false);
+                if (!black) {
+                  setBlack(!black);
+                  setRed(false);
+                  setBlue(false);
+                } else {
+                  setBlack(true);
+                }
               }}
             />
             <div
               className={red ? "Color Chosen" : "Color"}
               style={{ backgroundColor: data.colors[1] }}
               onClick={() => {
-                setRed(!red);
-                setBlack(false);
-                setBlue(false);
+                if (!red) {
+                  setRed(!red);
+                  setBlack(false);
+                  setBlue(false);
+                } else {
+                  setRed(true);
+                }
               }}
             />
             <div
               className={blue ? "Color Chosen" : "Color"}
               style={{ backgroundColor: data.colors[2] }}
               onClick={() => {
-                setBlue(!blue);
-                setBlack(false);
-                setRed(false);
+                if (!blue) {
+                  setBlue(!blue);
+                  setBlack(false);
+                  setRed(false);
+                } else {
+                  setBlue(true);
+                }
               }}
             />
           </div>
