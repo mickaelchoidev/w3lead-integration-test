@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import data from "../data/Data.json";
 import Navbar from "../components/Navbar";
@@ -10,9 +11,25 @@ import "./Home.css";
 const Home = () => {
   const newData = [...data];
   const ListChairs = newData[0].listProducts;
+  const pageVariants = {
+    initial: { x: "-100vw" },
+    in: { x: 0 },
+    out: { x: "-100vw" },
+  };
+  const pageTransition = {
+    transition: "linear",
+    duration: 0.4,
+  };
 
   return (
-    <div className="Home">
+    <motion.div
+      className="Home"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <h1 className="What-item-are-you-lo">What item are you looking for ?</h1>
 
       <Navbar className="Navbar" productsList={newData} />
@@ -39,7 +56,7 @@ const Home = () => {
 
         {/* {CardsDisplay(ListChairs)} */}
       </section>
-    </div>
+    </motion.div>
   );
 };
 

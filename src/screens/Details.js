@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import "./Details.css";
 
@@ -19,8 +20,26 @@ const Details = (props) => {
       `color: lightgreen; font-weight: bold; font-size: 30px`
     );
 
+  const pageVariants = {
+    initial: { x: "100vw" },
+    in: { x: 0 },
+    out: { x: "100vw" },
+  };
+  const pageTransition = {
+    transition: "linear",
+    duration: 0.4,
+  };
+
   return (
-    <div className="Details" style={{ backgroundColor: data.backgroundColor }}>
+    <motion.div
+      className="Details"
+      style={{ backgroundColor: data.backgroundColor }}
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <input type="button" value="<-" className="GoBack" onClick={GoBack} />
       <img
         src={require(`../images/${data.bigImage}.png`)}
@@ -99,7 +118,7 @@ const Details = (props) => {
           <p className="AddToCart">Add to Cart</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

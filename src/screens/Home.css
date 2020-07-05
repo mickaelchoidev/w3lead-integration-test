@@ -6,6 +6,7 @@ h1  {
 .Home {
   width: 75vw;
   margin: 0 auto 0 auto;
+  position: absolute;
 }
 
 .Card {
