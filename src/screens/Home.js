@@ -37,7 +37,7 @@ const Home = () => {
 
       <section className="Cards-container">
         {ListChairs.map((item, index) => {
-          if (index === 2) {
+          if (item.detailsTitle) {
             return (
               <Link
                 className="Card"
