@@ -1,29 +1,28 @@
 .Nav-container {
-  margin: 0 0 31px 30px;
+  margin: 0 0 31px 0;
   padding: 0;
-}
-.Nav-content {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
+  height: 36px;
+  position: relative;
   overflow-x: auto;
   scrollbar-width: none;
 }
+.Nav-content {
+  margin: 0 0 0 30px;
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 .Nav-link {
-  margin: 0 38px 0 0;
+  margin: 0 37.5px 0 0;
   padding: 0;
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-}
-.Nav-link:focus {
-  color: #3d3c3c;
-  outline: none;
-  background-color: #3d3c3c;
 }
 .Link {
   margin: 0;
@@ -58,6 +57,7 @@
   .Nav-content {
     display: flex;
     justify-content: center;
+    position: relative;
   }
   .Nav-link {
     margin: 0 30px 0 30px;

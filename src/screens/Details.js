@@ -4,6 +4,16 @@ import { motion } from "framer-motion";
 
 import "./Details.css";
 
+const pageVariants = {
+  initial: { x: "100vw" },
+  in: { x: 0 },
+  out: { x: "100vw" },
+};
+const pageTransition = {
+  transition: "linear",
+  duration: 0.5,
+};
+
 const Details = (props) => {
   let history = useHistory();
   const data = props.location.aboutProps;
@@ -19,16 +29,6 @@ const Details = (props) => {
       "%cProduit ajouté au panier",
       `color: lightgreen; font-weight: bold; font-size: 30px`
     );
-
-  const pageVariants = {
-    initial: { x: "100vw" },
-    in: { x: 0 },
-    out: { x: "100vw" },
-  };
-  const pageTransition = {
-    transition: "linear",
-    duration: 0.4,
-  };
 
   return (
     <motion.div

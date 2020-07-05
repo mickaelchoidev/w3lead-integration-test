@@ -2,8 +2,6 @@ import React, { useState } from "react";
 
 import "./Navbar.css";
 
-// Ici, je pense qu'avec plus de temps je peux faire en sorte d'avoir un composant navbar dynamique.
-
 const Navbar = () => {
   const [chairs, setChairs] = useState(true);
   const [sofas, setSofas] = useState(false);

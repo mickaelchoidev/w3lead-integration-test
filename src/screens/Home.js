@@ -8,18 +8,19 @@ import Card from "../components/Card";
 
 import "./Home.css";
 
+const pageVariants = {
+  initial: { x: "-100vw" },
+  in: { x: 0 },
+  out: { x: "-100vw" },
+};
+const pageTransition = {
+  transition: "linear",
+  duration: 0.5,
+};
+
 const Home = () => {
   const newData = [...data];
   const ListChairs = newData[0].listProducts;
-  const pageVariants = {
-    initial: { x: "-100vw" },
-    in: { x: 0 },
-    out: { x: "-100vw" },
-  };
-  const pageTransition = {
-    transition: "linear",
-    duration: 0.4,
-  };
 
   return (
     <motion.div
