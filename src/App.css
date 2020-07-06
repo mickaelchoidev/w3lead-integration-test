@@ -1,11 +1,12 @@
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
 h1,
 h2,
 h3,
 h4 {
   margin-top: 0px;
   margin-bottom: 0px;
-}
-
-@media screen and (max-width: 23.4375em) {
-  /* CSS rules here */
 }
